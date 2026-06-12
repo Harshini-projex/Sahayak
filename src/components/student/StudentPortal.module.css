@@ -1,0 +1,1054 @@
+/* ── Container ────────────────────────────────────────────── */
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.viewContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+}
+
+/* ── Green Banner (My Learning) ───────────────────────────── */
+.greenBanner {
+  background: linear-gradient(135deg, #059669 0%, #047857 60%, #065f46 100%);
+  border-radius: var(--radius-lg);
+  padding: 2rem 2.5rem;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.greenBanner::before {
+  content: '';
+  position: absolute;
+  right: -60px;
+  top: -60px;
+  width: 220px;
+  height: 220px;
+  background: rgba(255,255,255,0.07);
+  border-radius: 50%;
+}
+
+.bannerLeft {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.avatarCircle {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  border: 2px solid rgba(255,255,255,0.4);
+}
+
+.bannerName {
+  font-size: 1.35rem;
+  font-weight: 900;
+  letter-spacing: -0.02em;
+}
+
+.bannerMeta {
+  font-size: 0.8rem;
+  opacity: 0.8;
+  font-weight: 600;
+  margin-top: 0.2rem;
+}
+
+.bannerBadgeRow {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.smallBadge {
+  font-size: 0.65rem;
+  font-weight: 800;
+  background: rgba(255,255,255,0.18);
+  padding: 0.2rem 0.6rem;
+  border-radius: 9999px;
+  border: 1px solid rgba(255,255,255,0.25);
+}
+
+.bannerRight {
+  text-align: right;
+}
+
+.tokenBig {
+  font-size: 2.5rem;
+  font-weight: 900;
+  letter-spacing: -0.04em;
+  line-height: 1;
+}
+
+.tokenLabel {
+  font-size: 0.75rem;
+  font-weight: 700;
+  opacity: 0.8;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-top: 0.3rem;
+}
+
+/* ── Two-column layout ────────────────────────────────────── */
+.twoColGrid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+@media (max-width: 900px) {
+  .twoColGrid { grid-template-columns: 1fr; }
+}
+
+/* ── Panel Title ──────────────────────────────────────────── */
+.panelTitle {
+  font-size: 0.95rem;
+  font-weight: 900;
+  color: var(--foreground);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+/* ── Task Cards ───────────────────────────────────────────── */
+.taskStack {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.taskCard {
+  background: white;
+  border-radius: 12px;
+  padding: 1rem 1.25rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1.5px solid var(--border);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.taskCard:hover {
+  border-color: var(--student-accent);
+  transform: translateX(3px);
+  box-shadow: var(--shadow);
+}
+
+.taskPending {
+  border-left: 4px solid #f59e0b;
+}
+
+.taskDone {
+  opacity: 0.65;
+  cursor: default;
+}
+
+.taskNote {
+  border-left: 4px solid #f59e0b;
+  background: #fffbeb;
+}
+
+.taskCardLeft {
+  display: flex;
+  align-items: center;
+  gap: 0.875rem;
+}
+
+.subjectDot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.taskCardTitle {
+  font-weight: 800;
+  font-size: 0.9rem;
+}
+
+.taskCardMeta {
+  font-size: 0.75rem;
+  color: var(--muted);
+  font-weight: 600;
+  margin-top: 0.15rem;
+}
+
+.taskCardRight {
+  flex-shrink: 0;
+}
+
+.taskSectionLabel {
+  font-size: 0.7rem;
+  font-weight: 800;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 0.25rem 0;
+}
+
+/* ── Score Bar Chart ──────────────────────────────────────── */
+.scoreCard {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.scoreRow {
+  display: grid;
+  grid-template-columns: 60px 1fr 42px;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.scoreLabel {
+  font-size: 0.8rem;
+  font-weight: 800;
+  color: var(--muted);
+}
+
+.scoreBarBg {
+  height: 8px;
+  background: #f1f5f9;
+  border-radius: 9999px;
+  overflow: hidden;
+}
+
+.scoreBarFill {
+  height: 100%;
+  border-radius: 9999px;
+  transition: width 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.scorePct {
+  font-size: 0.8rem;
+  font-weight: 800;
+  text-align: right;
+}
+
+/* ── Modal ────────────────────────────────────────────────── */
+.modalOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(2, 6, 23, 0.45);
+  backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1100;
+}
+
+.modal {
+  background: white;
+  border-radius: var(--radius-lg);
+  width: 100%;
+  max-width: 480px;
+  padding: 2rem;
+  box-shadow: var(--shadow-premium);
+  margin: 1rem;
+  animation: popIn 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.readerModal {
+  background: white;
+  border-radius: var(--radius-lg);
+  width: 90%;
+  max-width: 640px;
+  padding: 2rem;
+  box-shadow: var(--shadow-premium);
+  margin: 1rem;
+  max-height: 85vh;
+  display: flex;
+  flex-direction: column;
+  animation: popIn 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+@keyframes popIn {
+  from { transform: scale(0.9) translateY(10px); opacity: 0; }
+  to { transform: scale(1) translateY(0); opacity: 1; }
+}
+
+.modalHead {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 900;
+  font-size: 1.05rem;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 0.75rem;
+  margin-bottom: 1.25rem;
+  color: var(--student-accent);
+}
+
+.closeBtn {
+  background: #f1f5f9;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  cursor: pointer;
+  color: var(--muted);
+}
+
+.closeBtn:hover { background: #e2e8f0; }
+
+.questionText {
+  font-weight: 800;
+  font-size: 1rem;
+  margin-bottom: 1.25rem;
+  line-height: 1.5;
+}
+
+.optionsList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.optionBtn {
+  text-align: left;
+  padding: 0.875rem 1rem;
+  border-radius: 10px;
+  border: 1.5px solid var(--border);
+  background: #f8fafc;
+  font-weight: 700;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.optionBtn:hover { border-color: var(--student-accent); }
+
+.optionSel {
+  border-color: var(--student-accent);
+  background: rgba(5,150,105,0.06);
+  color: var(--student-accent);
+}
+
+.submitBtn {
+  width: 100%;
+  padding: 1rem;
+  border-radius: 10px;
+  background: var(--student-accent);
+  color: white;
+  font-weight: 800;
+  font-size: 0.95rem;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.submitBtn:disabled { opacity: 0.45; cursor: not-allowed; }
+.submitBtn:not(:disabled):hover { filter: brightness(1.1); }
+
+.readerBody {
+  overflow-y: auto;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: #334155;
+  padding-top: 0.5rem;
+}
+
+.highlightBox {
+  background: #fffbeb;
+  border-left: 4px solid var(--accent);
+  padding: 0.875rem 1rem;
+  border-radius: 0 8px 8px 0;
+  margin: 1rem 0;
+  font-size: 0.9rem;
+  color: #92400e;
+}
+
+/* ── Quizzes & Challenges View ────────────────────────────── */
+.challengeHeader {
+  background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+  border-radius: var(--radius-lg);
+  padding: 1.75rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+}
+
+.masteryBlock {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.masteryPts {
+  font-size: 2rem;
+  font-weight: 900;
+  letter-spacing: -0.04em;
+  line-height: 1;
+}
+
+.masteryLabel {
+  font-size: 0.75rem;
+  opacity: 0.7;
+  font-weight: 600;
+  margin-top: 0.25rem;
+}
+
+.streakBlock {
+  text-align: center;
+  background: rgba(245,158,11,0.2);
+  border: 1px solid rgba(245,158,11,0.3);
+  border-radius: 12px;
+  padding: 0.875rem 1.5rem;
+}
+
+.streakNum {
+  font-size: 2rem;
+  font-weight: 900;
+}
+
+.streakLabel {
+  font-size: 0.75rem;
+  opacity: 0.8;
+  font-weight: 700;
+}
+
+.challengeList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.875rem;
+}
+
+.challengeCard {
+  background: white;
+  border: 1.5px solid var(--border);
+  border-radius: 12px;
+  padding: 1.25rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.2s ease;
+}
+
+.challengeCard:hover { box-shadow: var(--shadow); }
+
+.challengeDone {
+  opacity: 0.55;
+}
+
+.challengeInfo { flex: 1; }
+
+.challengeTitle {
+  font-weight: 800;
+  font-size: 0.95rem;
+}
+
+.challengeMeta {
+  font-size: 0.78rem;
+  color: var(--muted);
+  font-weight: 600;
+  margin-top: 0.2rem;
+}
+
+.startBtn {
+  display: flex;
+  align-items: center;
+  gap: 0.375rem;
+  background: var(--student-accent);
+  color: white;
+  border: none;
+  padding: 0.625rem 1.25rem;
+  border-radius: 8px;
+  font-weight: 800;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.startBtn:hover { filter: brightness(1.1); transform: translateY(-1px); }
+
+.completedTag {
+  display: flex;
+  align-items: center;
+  gap: 0.375rem;
+  color: var(--secondary);
+  font-weight: 800;
+  font-size: 0.85rem;
+}
+
+.emptyState {
+  text-align: center;
+  padding: 3rem;
+  color: var(--muted);
+  font-weight: 600;
+  background: white;
+  border: 1px dashed var(--border);
+  border-radius: 12px;
+}
+
+/* ── Leaderboard ──────────────────────────────────────────── */
+.leaderboard {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.leaderRow {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.875rem 1.25rem;
+  border-bottom: 1px solid var(--border);
+  transition: background 0.15s;
+}
+
+.leaderRow:last-child { border-bottom: none; }
+.leaderRow:hover { background: #f8fafc; }
+
+.leaderHighlight {
+  background: #ecfdf5 !important;
+  border-left: 3px solid var(--student-accent);
+}
+
+.leaderRank {
+  font-size: 1.1rem;
+  width: 36px;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.leaderName {
+  flex: 1;
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.leaderPts {
+  font-weight: 900;
+  color: var(--student-accent);
+  font-size: 0.9rem;
+}
+
+/* ── Textbook Hub View ────────────────────────────────────── */
+.offlineBanner {
+  background: #ecfdf5;
+  border: 1px solid #34d399;
+  color: #065f46;
+  font-size: 0.82rem;
+  font-weight: 700;
+  padding: 0.75rem 1.25rem;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+}
+
+.gradeSection {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.gradeLabel {
+  font-size: 0.8rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: white;
+  background: var(--student-accent);
+  padding: 0.625rem 1.25rem;
+}
+
+.bookRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.875rem 1.25rem;
+  border-bottom: 1px solid var(--border);
+  transition: background 0.15s;
+}
+
+.bookRow:last-child { border-bottom: none; }
+.bookRow:hover { background: #f8fafc; }
+
+.bookInfo {
+  display: flex;
+  align-items: center;
+  gap: 0.875rem;
+}
+
+.bookName {
+  font-weight: 800;
+  font-size: 0.9rem;
+}
+
+.bookSize {
+  font-size: 0.72rem;
+  color: var(--muted);
+  font-weight: 600;
+  margin-top: 0.1rem;
+}
+
+.bookBtn {
+  display: flex;
+  align-items: center;
+  gap: 0.375rem;
+  font-weight: 800;
+  font-size: 0.8rem;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  border: none;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.downloadBtn {
+  background: #f0fdf4;
+  color: var(--student-accent);
+  border: 1.5px solid var(--student-accent);
+}
+
+.downloadBtn:hover { background: var(--student-accent); color: white; }
+
+.savedBtn {
+  background: var(--student-accent);
+  color: white;
+}
+
+.progressPill {
+  position: relative;
+  width: 100px;
+  height: 28px;
+  background: #f1f5f9;
+  border-radius: 9999px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.progressFill {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  background: var(--student-accent);
+  border-radius: 9999px;
+  transition: width 0.15s ease;
+}
+
+.progressPill span {
+  position: relative;
+  z-index: 1;
+  font-size: 0.7rem;
+  font-weight: 800;
+  color: white;
+}
+
+/* ── My Progress View ─────────────────────────────────────── */
+.metricsRow {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.25rem;
+}
+
+@media (max-width: 900px) {
+  .metricsRow { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 480px) {
+  .metricsRow { grid-template-columns: 1fr 1fr; }
+}
+
+.metricTile {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.metricVal {
+  font-size: 2rem;
+  font-weight: 900;
+  letter-spacing: -0.04em;
+}
+
+.metricLbl {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-top: 0.375rem;
+}
+
+/* ── Badge Grid ───────────────────────────────────────────── */
+.badgeGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+@media (max-width: 700px) {
+  .badgeGrid { grid-template-columns: repeat(2, 1fr); }
+}
+
+.badgeTile {
+  background: white;
+  border: 1.5px solid var(--border);
+  border-radius: 12px;
+  padding: 1.25rem;
+  text-align: center;
+  transition: all 0.2s ease;
+}
+
+.badgeEarned {
+  border-color: #fbbf24;
+  background: #fffbeb;
+}
+
+.badgeLocked {
+  opacity: 0.5;
+  filter: grayscale(0.4);
+}
+
+.badgeIcon {
+  font-size: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 48px;
+  margin-bottom: 0.5rem;
+}
+
+.badgeName {
+  font-weight: 900;
+  font-size: 0.85rem;
+}
+
+.badgeDesc {
+  font-size: 0.7rem;
+  color: var(--muted);
+  margin-top: 0.25rem;
+  font-weight: 600;
+}
+
+.earnedTag {
+  margin-top: 0.5rem;
+  font-size: 0.65rem;
+  font-weight: 800;
+  color: #059669;
+  text-transform: uppercase;
+}
+
+/* ── XP Level Tracker ─────────────────────────────────────── */
+.xpCard {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+}
+
+.xpLabels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.82rem;
+  font-weight: 800;
+  margin-bottom: 0.75rem;
+}
+
+.xpBarBg {
+  height: 14px;
+  background: #f1f5f9;
+  border-radius: 9999px;
+  overflow: hidden;
+}
+
+.xpBarFill {
+  height: 100%;
+  background: linear-gradient(90deg, #059669 0%, #34d399 100%);
+  border-radius: 9999px;
+  transition: width 1s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.xpHint {
+  font-size: 0.75rem;
+  color: var(--muted);
+  font-weight: 600;
+  margin-top: 0.625rem;
+}
+
+/* ── AI Chat ──────────────────────────────────────────────── */
+.chatBox {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.chatMessages {
+  flex: 1;
+  overflow-y: auto;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.chatBubble {
+  max-width: 78%;
+  padding: 0.875rem 1.125rem;
+  border-radius: 16px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.bubbleBot {
+  align-self: flex-start;
+  background: #f1f5f9;
+  color: #1e293b;
+  border-bottom-left-radius: 4px;
+}
+
+.bubbleUser {
+  align-self: flex-end;
+  background: var(--student-accent);
+  color: white;
+  border-bottom-right-radius: 4px;
+}
+
+.chatForm {
+  padding: 1rem 1.25rem;
+  border-top: 1px solid var(--border);
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.chatInput {
+  flex: 1;
+  padding: 0.875rem 1rem;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  outline: none;
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 0.9rem;
+  background: #f8fafc;
+}
+
+.chatInput:focus { border-color: var(--student-accent); }
+
+.chatSend {
+  width: 46px;
+  height: 46px;
+  border-radius: 12px;
+  background: var(--student-accent);
+  color: white;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+}
+
+.chatSend:hover { filter: brightness(1.1); }
+
+/* ── Spinner ──────────────────────────────────────────────── */
+.spin { animation: spin 1s linear infinite; }
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* ── Welcome banner (legacy, kept for completeness) ─────── */
+.welcomeBanner {
+  background: var(--student-accent);
+  padding: 2.5rem;
+  border-radius: var(--radius-lg);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.welcomeContent h2 { font-size: 2rem; font-weight: 900; }
+
+.performanceStrip { display: flex; gap: 1rem; margin-top: 1rem; flex-wrap: wrap; }
+
+.stripItem {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  background: rgba(255,255,255,0.15);
+  padding: 0.4rem 0.875rem;
+  border-radius: 9999px;
+}
+
+.bannerStats { display: flex; gap: 1.5rem; }
+.bannerStat { text-align: center; }
+.bannerStatValue { font-size: 1.75rem; font-weight: 900; display: block; }
+.bannerStatLabel { font-size: 0.7rem; font-weight: 700; opacity: 0.8; text-transform: uppercase; }
+
+.mainGrid {
+  display: grid;
+  grid-template-columns: 1.8fr 1fr;
+  gap: 2rem;
+}
+
+.leftCol, .rightCol {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.sectionHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sectionHeader h3 {
+  font-size: 1.15rem;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.taskList { display: flex; flex-direction: column; gap: 0.625rem; }
+
+.taskRow {
+  background: white;
+  padding: 1rem 1.25rem;
+  border-radius: 12px;
+  border: 1.5px solid var(--border);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.taskRow:hover { border-color: var(--student-accent); transform: translateX(3px); }
+
+.taskMain { display: flex; align-items: center; gap: 0.875rem; }
+
+.subjectIcon {
+  width: 38px;
+  height: 38px;
+  background: #f1f5f9;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--student-accent);
+}
+
+.taskTitle { font-weight: 800; font-size: 0.9rem; }
+.taskMeta { font-size: 0.72rem; font-weight: 600; color: var(--muted); margin-top: 0.1rem; }
+.taskStatus { display: flex; align-items: center; gap: 0.75rem; }
+.pointBadge { font-weight: 800; color: var(--accent); font-size: 0.82rem; }
+
+/* milestoneCard */
+.milestoneCard {
+  background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+  padding: 1.5rem;
+  border-radius: var(--radius-lg);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 8px 20px rgba(245,158,11,0.2);
+}
+
+.milestonePoints { font-size: 2rem; font-weight: 900; }
+
+.streakBadge {
+  background: rgba(255,255,255,0.2);
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  gap: 0.375rem;
+  font-weight: 800;
+}
+
+/* Vault */
+.vaultAlert {
+  background: #ecfdf5;
+  border: 1px solid #34d399;
+  padding: 0.7rem 1.25rem;
+  border-radius: 10px;
+  color: #065f46;
+  font-size: 0.8rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.vaultGrid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px,1fr)); gap: 1.5rem; }
+
+/* Legacy badge */
+.badge {
+  padding: 0.3rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.72rem;
+  font-weight: 800;
+}
+
+.viewAll { background: none; border: none; color: var(--student-accent); font-weight: 800; cursor: pointer; }
+
+@media (max-width: 1024px) {
+  .mainGrid { grid-template-columns: 1fr; }
+  .greenBanner { flex-direction: column; align-items: flex-start; gap: 1.5rem; }
+}
+
+@media (max-width: 640px) {
+  .greenBanner { padding: 1.5rem; }
+  .tokenBig { font-size: 2rem; }
+}

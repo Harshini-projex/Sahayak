@@ -1,0 +1,71 @@
+.sidebar {
+  width: 280px;
+  background: white;
+  border-right: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1.5rem;
+  height: calc(100vh - 72px);
+  position: sticky;
+  top: 72px;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.menuItem {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.875rem 1.25rem;
+  border-radius: 12px;
+  color: var(--muted);
+  font-weight: 700;
+  font-size: 0.9375rem;
+  transition: var(--transition);
+  cursor: pointer;
+}
+
+.menuItem:hover {
+  background: #f8fafc;
+  color: var(--foreground);
+}
+
+.active {
+  color: white !important;
+}
+
+/* Teacher Portal Accent */
+.teacher .active {
+  background: var(--teacher-accent);
+  box-shadow: 0 4px 12px rgba(249, 115, 22, 0.25);
+}
+
+/* Student Portal Accent */
+.student .active {
+  background: var(--student-accent);
+  box-shadow: 0 4px 12px rgba(5, 150, 105, 0.25);
+}
+
+/* Parent Portal Accent */
+.parent .active {
+  background: var(--parent-accent);
+  box-shadow: 0 4px 12px rgba(139, 92, 246, 0.25);
+}
+
+.footer {
+  border-top: 1px solid var(--border);
+  padding-top: 1.5rem;
+  list-style: none;
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    display: none;
+  }
+}

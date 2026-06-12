@@ -1,0 +1,247 @@
+{
+  "attendance": [
+    {
+      "date": "2026-06-10",
+      "students": [
+        {
+          "id": "1",
+          "status": "present"
+        },
+        {
+          "id": "2",
+          "status": "present"
+        },
+        {
+          "id": "3",
+          "status": "absent"
+        },
+        {
+          "id": "4",
+          "status": "present"
+        },
+        {
+          "id": "5",
+          "status": "absent"
+        },
+        {
+          "id": "6",
+          "status": "present"
+        },
+        {
+          "id": "7",
+          "status": "present"
+        }
+      ]
+    },
+    {
+      "date": "2026-06-11",
+      "students": [
+        {
+          "id": "1",
+          "status": "present"
+        },
+        {
+          "id": "2",
+          "status": "present"
+        },
+        {
+          "id": "3",
+          "status": "present"
+        },
+        {
+          "id": "4",
+          "status": "absent"
+        },
+        {
+          "id": "5",
+          "status": "present"
+        },
+        {
+          "id": "6",
+          "status": "present"
+        },
+        {
+          "id": "7",
+          "status": "absent"
+        }
+      ]
+    }
+  ],
+  "notes": [
+    {
+      "id": "1781188489132",
+      "fileName": "Gravity.pdf",
+      "description": "refer this link",
+      "date": "2026-06-11T14:34:49.132Z"
+    },
+    {
+      "id": "note1",
+      "fileName": "Introduction to AI.pdf",
+      "description": "Basic concepts of machine learning, neural networks, and prompt engineering discussed today.",
+      "date": "2026-06-11T12:00:00.000Z"
+    }
+  ],
+  "syncedNotes": [
+    {
+      "id": "sn1",
+      "title": "Algebra Basics",
+      "subject": "Mathematics",
+      "grade": "Grade 6",
+      "fileName": "Algebra_Basics.pdf",
+      "date": "2026-06-10"
+    },
+    {
+      "id": "sn2",
+      "title": "Photosynthesis Notes",
+      "subject": "Science",
+      "grade": "Grade 6",
+      "fileName": "Photosynthesis.pdf",
+      "date": "2026-06-11"
+    }
+  ],
+  "lessons": [
+    {
+      "id": "kzbjfujxm",
+      "topic": "Gravity",
+      "content": "### Core Objectives for Gravity (Mathematics - Grade 6)\n- Understand the primary laws and equations of Gravity.\n- Connect Gravity to daily life applications in rural ecosystems.\n\n### Split-Level Teaching Materials\n- **Foundational Buddies (Basic)**: \n  - Visual objects modeling: explaining Gravity using pebbles, leaves, or water cups.\n  - Guided step-by-step practice sheets.\n- **Advanced Explorers (Higher Order)**:\n  - Formulation: translating complex word problems into expressions.\n  - Multi-variable challenges.\n\n### Hyperlocal Classroom Activities\n- **Local Lore Connection**: Introduce this topic by sharing how village ancestors used traditional weighing scales (Tharasu) to balance grains.\n- **Group Activity**: Split the class into groups and let them build physical diagrams on the clay playground.\n\n### Quiz Blueprint (Mastery Check)\n1. Multiple Choice concept question about Gravity.\n2. Step-by-step algebraic modeling exercise.\n3. Creative open-ended reflection question.",
+      "date": "11/6/2026"
+    },
+    {
+      "id": "plan1",
+      "topic": "Introduction to Algebra",
+      "content": "Core Objectives: Understand variables and simple equations.\nSplit-Level Materials:\n- Foundational: Visual balance puzzles representing equations.\n- Advanced: Solving two-step linear equations.\nLocal Activities: Share marbles among children to express equations visually.",
+      "date": "2026-06-10"
+    }
+  ],
+  "challenges": [
+    {
+      "id": "ch1",
+      "title": "Algebra Speed Round",
+      "subject": "Mathematics",
+      "questions": 10,
+      "points": 100,
+      "status": "pending"
+    },
+    {
+      "id": "ch2",
+      "title": "Science Quiz: Forces",
+      "subject": "Science",
+      "questions": 8,
+      "points": 80,
+      "status": "pending"
+    }
+  ],
+  "students": [
+    {
+      "id": "1",
+      "name": "Rohan Deshpande",
+      "roll": "102",
+      "grade": "6A",
+      "age": 10,
+      "height": 132,
+      "weight": 26,
+      "hb": 9.4,
+      "score": 76,
+      "points": 300,
+      "status": "atRisk",
+      "badges": [
+        "🥗 Healthy Eater"
+      ]
+    },
+    {
+      "id": "2",
+      "name": "Meera Patil",
+      "roll": "101",
+      "grade": "6A",
+      "age": 10,
+      "height": 134,
+      "weight": 28,
+      "hb": 8.8,
+      "score": 88,
+      "points": 2150,
+      "status": "atRisk",
+      "badges": [
+        "🥗 Healthy Eater",
+        "📚 Reader Pro",
+        "⭐ Gold Star",
+        "Sharp Mind"
+      ]
+    },
+    {
+      "id": "3",
+      "name": "Ananya Rao",
+      "roll": "103",
+      "grade": "6A",
+      "age": 9,
+      "height": 128,
+      "weight": 25,
+      "hb": 12.1,
+      "score": 82,
+      "points": 1850,
+      "status": "stable",
+      "badges": [
+        "🏆 Quiz Champion"
+      ]
+    },
+    {
+      "id": "4",
+      "name": "Kiran Kumar",
+      "roll": "105",
+      "grade": "6A",
+      "age": 11,
+      "height": 138,
+      "weight": 32,
+      "hb": 10.2,
+      "score": 65,
+      "points": 1200,
+      "status": "stable",
+      "badges": []
+    },
+    {
+      "id": "5",
+      "name": "Aditya Hegde",
+      "roll": "104",
+      "grade": "6B",
+      "age": 10,
+      "height": 135,
+      "weight": 29,
+      "hb": 11.2,
+      "score": 71,
+      "points": 980,
+      "status": "stable",
+      "badges": []
+    },
+    {
+      "id": "6",
+      "name": "Savitri Bai",
+      "roll": "201",
+      "grade": "6B",
+      "age": 10,
+      "height": 136,
+      "weight": 30,
+      "hb": 11.5,
+      "score": 94,
+      "points": 2800,
+      "status": "stable",
+      "badges": [
+        "🏆 Quiz Champion",
+        "🥗 Healthy Eater",
+        "⭐ Gold Star"
+      ]
+    },
+    {
+      "id": "7",
+      "name": "Kumar Swami",
+      "roll": "202",
+      "grade": "6B",
+      "age": 11,
+      "height": 130,
+      "weight": 24,
+      "hb": 7.2,
+      "score": 62,
+      "points": 640,
+      "status": "critical",
+      "badges": []
+    }
+  ]
+}

@@ -1,0 +1,497 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  animation: fadeIn 0.4s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Section Headers */
+.sectionHeader {
+  margin-bottom: 1.5rem;
+}
+.sectionHeader h3 {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.25rem;
+  color: var(--foreground);
+}
+
+/* =========================================
+   DASHBOARD HOME VIEW
+========================================= */
+.dashboardContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* Hero Card */
+.heroCard {
+  background: linear-gradient(135deg, var(--primary), var(--parent-accent));
+  border-radius: var(--radius-lg);
+  padding: 2.5rem;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: var(--shadow-lg);
+}
+.heroProfile {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+.heroAvatar {
+  width: 80px;
+  height: 80px;
+  background: rgba(255,255,255,0.2);
+  border: 3px solid rgba(255,255,255,0.5);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  font-weight: 900;
+  backdrop-filter: blur(4px);
+}
+.heroInfo h2 {
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 0.25rem;
+}
+.heroInfo p {
+  font-size: 1rem;
+  opacity: 0.9;
+  font-weight: 600;
+}
+.statBadge {
+  background: rgba(255,255,255,0.15);
+  padding: 0.75rem 1.5rem;
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 800;
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(255,255,255,0.2);
+}
+
+.dashboardGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+/* Progress Bars */
+.progressBarBg {
+  background: var(--border);
+  height: 12px;
+  border-radius: 9999px;
+  overflow: hidden;
+  width: 100%;
+}
+.progressBarFill {
+  background: var(--parent-accent);
+  height: 100%;
+  border-radius: 9999px;
+  transition: width 1s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Weekly Attendance */
+.attendanceBarContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+.attendanceBarHeader {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 800;
+  font-size: 1.1rem;
+}
+
+/* Performance Overview Bar Chart */
+.barChart {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+.chartRow {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.chartLabel {
+  width: 80px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+.chartBarBg {
+  flex: 1;
+  background: var(--border);
+  height: 14px;
+  border-radius: 4px;
+  overflow: hidden;
+}
+.chartBarFill {
+  height: 100%;
+  border-radius: 4px;
+  transition: width 1s ease-out;
+}
+.chartValue {
+  width: 40px;
+  text-align: right;
+  font-weight: 800;
+  font-size: 0.9rem;
+}
+
+/* =========================================
+   ATTENDANCE CALENDAR VIEW
+========================================= */
+.attendanceContainer {
+  max-width: 800px;
+  margin: 0 auto;
+  width: 100%;
+}
+.attendanceHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 1.5rem;
+}
+.attendanceSubtext {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--muted);
+  margin-top: 0.25rem;
+}
+.statBox {
+  text-align: right;
+}
+.statValue {
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: var(--parent-accent);
+  line-height: 1;
+}
+.statLabel {
+  font-size: 0.8rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: var(--muted);
+  letter-spacing: 1px;
+}
+
+.legend {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+.legendItem {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+.dotPresent { width: 12px; height: 12px; border-radius: 50%; background: #10b981; }
+.dotAbsent { width: 12px; height: 12px; border-radius: 50%; background: #ef4444; }
+
+.calendarGrid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 1rem;
+}
+.calDayName {
+  text-align: center;
+  font-weight: 800;
+  color: var(--muted);
+  padding-bottom: 0.5rem;
+  font-size: 0.9rem;
+}
+.calDayWrapper {
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.calDay {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-weight: 800;
+  font-size: 1.1rem;
+  transition: transform 0.2s;
+}
+.calDay:hover {
+  transform: scale(1.05);
+}
+.daypresent { background: #dcfce7; color: #059669; border: 2px solid #10b981; }
+.dayabsent { background: #fee2e2; color: #b91c1c; border: 2px solid #ef4444; }
+.dayweekend { background: var(--background); color: var(--muted); border: 2px dashed var(--border); }
+
+
+/* =========================================
+   PERFORMANCE VIEW
+========================================= */
+.performanceGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+/* Left: Report Card */
+.reportCard {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.overallScore {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+.scoreCircle {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: conic-gradient(var(--parent-accent) 88%, var(--border) 0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.scoreCircle::before {
+  content: '';
+  position: absolute;
+  inset: 10px;
+  background: var(--card);
+  border-radius: 50%;
+}
+.scoreCircle span {
+  position: relative;
+  font-size: 2.2rem;
+  font-weight: 900;
+  color: var(--parent-accent);
+}
+
+.subjectList {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+.subjectItem {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.subjectHeader {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 700;
+}
+.subjectName { color: var(--foreground); }
+.subjectScore { color: var(--muted); font-size: 0.9rem; }
+
+/* Right: Badge Showcase */
+.badgeShowcase {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 1rem;
+}
+.badgeCard {
+  background: var(--background);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.5rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.75rem;
+  transition: all 0.3s ease;
+}
+.badgeEmoji {
+  font-size: 2.5rem;
+  filter: grayscale(1);
+  opacity: 0.4;
+  transition: all 0.3s ease;
+}
+.badgeName {
+  font-weight: 700;
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+/* Unlocked states */
+.badgeCard.unlocked {
+  background: linear-gradient(to bottom, #fffbeb, #ffffff);
+  border-color: #fcd34d;
+  box-shadow: 0 4px 15px rgba(245, 158, 11, 0.1);
+  transform: translateY(-2px);
+}
+.badgeCard.unlocked .badgeEmoji {
+  filter: grayscale(0);
+  opacity: 1;
+  transform: scale(1.1);
+}
+.badgeCard.unlocked .badgeName {
+  color: #b45309;
+}
+
+/* =========================================
+   HEALTH & MEALS VIEW
+========================================= */
+.healthContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.metricsRibbon {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+.metricCard {
+  background: var(--card);
+  padding: 1.5rem;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  box-shadow: var(--shadow);
+}
+.metricLabel {
+  font-size: 0.8rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: var(--muted);
+  letter-spacing: 1px;
+  margin-bottom: 0.5rem;
+}
+.metricValue {
+  font-size: 2rem;
+  font-weight: 900;
+  line-height: 1;
+}
+.metricValue small {
+  font-size: 1rem;
+  color: var(--muted);
+}
+.metricStatus {
+  margin-top: 0.5rem;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 800;
+}
+.metricStatus[data-status="good"] { background: #dcfce7; color: #166534; }
+.metricStatus[data-status="warning"] { background: #fef3c7; color: #92400e; }
+
+.criticalAlert {
+  display: flex;
+  gap: 1.25rem;
+  background: #fdf2f2;
+  border: 1px solid #fee2e2;
+  border-left: 5px solid;
+  padding: 1.25rem 1.5rem;
+  border-radius: var(--radius);
+  align-items: flex-start;
+}
+.criticalAlert h4 {
+  font-size: 1.1rem;
+  margin-bottom: 0.25rem;
+  font-weight: 800;
+}
+.criticalAlert p {
+  color: var(--card-foreground);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* Meal Table */
+.tableWrapper {
+  overflow-x: auto;
+}
+.mealTable {
+  width: 100%;
+  border-collapse: collapse;
+}
+.mealTable th {
+  text-align: left;
+  padding: 1rem;
+  background: var(--background);
+  color: var(--muted);
+  font-weight: 800;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-bottom: 2px solid var(--border);
+}
+.mealTable td {
+  padding: 1.25rem 1rem;
+  border-bottom: 1px solid var(--border);
+  font-size: 0.95rem;
+}
+.tableDate {
+  font-weight: 700;
+  color: var(--muted);
+}
+.statusBadge {
+  padding: 0.35rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 800;
+  display: inline-block;
+}
+.statusBadge[data-status="good"] {
+  background: #dcfce7; color: #166534;
+}
+.statusBadge[data-status="neutral"] {
+  background: #f1f5f9; color: #475569;
+}
+.mutedText {
+  color: var(--muted);
+  font-style: italic;
+  font-size: 0.85rem;
+}
+
+@media (max-width: 768px) {
+  .dashboardGrid,
+  .performanceGrid {
+    grid-template-columns: 1fr;
+  }
+  .heroCard {
+    flex-direction: column;
+    text-align: center;
+    gap: 1.5rem;
+  }
+  .heroProfile {
+    flex-direction: column;
+  }
+  .metricsRibbon {
+    grid-template-columns: 1fr;
+  }
+  .calendarGrid {
+    gap: 0.5rem;
+  }
+  .calDay {
+    font-size: 0.9rem;
+  }
+}
