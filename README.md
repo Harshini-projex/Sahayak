@@ -1,21 +1,3 @@
-## Getting Started
-
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
 # Sahayak
 An AI-Powered Hyperlocal Ecosystem for Integrated EdTech & HealthTech designed to bridge the technology, educational, and nutritional gaps in rural and under-resourced schools.
 Sahayak provides a clean-slate gateway that synchronizes classroom learning progress with vital mid-day meal nutrition data and student health tracking into a unified multi-portal system.
@@ -41,4 +23,22 @@ Sahayak provides a clean-slate gateway that synchronizes classroom learning prog
 - Backend: Next.js Server-Side / API Routes
 - State Management & Mock DB: React Context API / Centralized Mock Database Layer for fluid state synchronization across portfolios
 - Localization: Multilingual User Interface support (English & Kannada)
+
+  ## Getting Started
+
+First, run the development server:
+
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
+```
+
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 >>>>>>> 42332801db8373a151bc9a70659f52a6bde83a72
